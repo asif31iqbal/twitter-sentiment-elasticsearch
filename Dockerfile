@@ -1,9 +1,10 @@
 # start with a base image
 FROM ubuntu:14.04
 
-MAINTAINER Real Python <gregcmartin@gmail.com>
+MAINTAINER Greg Martin <gregcmartin@gmail.com>
 
 # initial update
+RUN rm /var/lib/apt/lists/* -vf
 RUN apt-get update -q
 
 # install wget, java, and mini-httpd web server
