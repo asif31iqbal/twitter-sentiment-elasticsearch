@@ -30,4 +30,4 @@ RUN cd /tmp && \
 CMD /opt/elasticsearch/bin/elasticsearch & /opt/kibana/bin/kibana
 
 # expose ports
-EXPOSE 8000 5601
+EXPOSE 9200 5601
