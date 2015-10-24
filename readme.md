@@ -8,3 +8,4 @@ Check out the blog post - [https://realpython.com/blog/python/twitter-sentiment-
 
 * docker build -rm -t=elasticsearch-kibana .
 * docker run -d -p 9200:9200 -p 5601:5601 elasticsearch-kibana
+* pip install tweepy textblob elasticsearch
