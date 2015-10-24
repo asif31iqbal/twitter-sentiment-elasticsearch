@@ -17,7 +17,7 @@ RUN cd /tmp && \
     wget -nv https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.3.tar.gz && \
     tar zxf elasticsearch-1.7.3.tar.gz && \
     rm -f elasticsearch-1.7.3.tar.gz && \
-    mv /tmp/elasticsearch-1.7.3.tar.gz /elasticsearch
+    mv /tmp/elasticsearch-1.7.3 /elasticsearch
 
 # install kibana
 RUN cd /tmp && \
