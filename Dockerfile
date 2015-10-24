@@ -6,11 +6,10 @@ MAINTAINER Greg Martin <gregcmartin@gmail.com>
 # initial update
 RUN apt-get clean -q
 RUN apt-get update -q
-
 # install wget, java, and mini-httpd web server
 RUN apt-get install -yq wget
 RUN apt-get install -yq default-jre-headless
-RUN apt-get install -yq mini-httpd
+#RUN apt-get install -yq mini-httpd
 
 # install elasticsearch
 RUN cd /tmp && \
@@ -25,10 +24,10 @@ RUN cd /tmp && \
     tar zxf kibana-4.1.2-linux-x64.tar.gz && \
     rm -f kibana-4.1.2-linux-x64.tar.gz && \
     mv /tmp/kibana-4.1.2-linux-x64 /opt/kibana
-    
+
 
 # start elasticsearch
-CMD /opt/elasticsearch/bin/elasticsearch -Des.logger.level=OFF & /opt/kibana
+CMD /opt/elasticsearch/bin/elasticsearch & /opt/kibana/bin/kibana
 
 # expose ports
-EXPOSE 5601
+EXPOSE 8000 5601
