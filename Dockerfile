@@ -13,10 +13,10 @@ RUN apt-get install -yq default-jre-headless
 
 # install elasticsearch
 RUN cd /tmp && \
-    wget -nv https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.3.tar.gz && \
-    tar zxf elasticsearch-1.7.3.tar.gz && \
-    rm -f elasticsearch-1.7.3.tar.gz && \
-    mv /tmp/elasticsearch-1.7.3 /opt/elasticsearch
+    wget -nv https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/2.0.0/elasticsearch-2.0.0.tar.gz && \
+    tar zxf elasticsearch-2.0.0.tar.gz && \
+    rm -f elasticsearch-2.0.0.tar.gz && \
+    mv /tmp/elasticsearch-2.0.0 /opt/elasticsearch
 
 # install kibana
 RUN cd /tmp && \
